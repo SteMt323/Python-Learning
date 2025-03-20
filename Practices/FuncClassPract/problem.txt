@@ -1,0 +1,36 @@
+"""
+Problema: "Gestión de un sistema de biblioteca"
+
+Imagina que tienes que desarrollar una pequeña aplicación para gestionar una 
+biblioteca. La biblioteca tiene libros, y cada libro tiene un título, un autor 
+y un estado que indica si está prestado o disponible. Los usuarios pueden 
+tomar prestados libros y devolverlos. Además, quieres poder ver qué libros 
+están disponibles y qué libros han sido tomados prestados.
+
+Requisitos:
+1. Crea una clase llamada Libro que tenga los siguientes atributos:
+
+    Título (cadena de caracteres)
+    Autor (cadena de caracteres)
+    Estado (puede ser "disponible" o "prestado")
+    Además, la clase debe tener un método para cambiar el estado de un libro de "disponible" a "prestado" y viceversa.
+
+2. Crea una clase llamada Biblioteca que contenga:
+
+    - Una lista de libros.
+    - Métodos para:
+        - Agregar un libro a la biblioteca.
+        - Ver todos los libros de la biblioteca.
+        - Ver los libros disponibles.
+        - Ver los libros prestados.
+        - Prestar un libro (cambiar su estado a "prestado").
+        - Devolver un libro (cambiar su estado a "disponible").
+    
+Extra: Para que sea más completo, implementa un método en la clase Biblioteca para buscar libros por título y autor.
+
+
+Puntos a resolver:
+- Cómo manipular los estados de los libros.
+- Cómo gestionar la lista de libros de manera eficiente.
+- Cómo realizar búsquedas y filtros de libros.
+"""

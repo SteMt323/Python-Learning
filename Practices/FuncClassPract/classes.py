@@ -54,28 +54,25 @@ class Biblioteca():
                 
     def buscar_libro_titulo_autor(self):
         opc = input("Desea buscar el libro por: \n 1- Titulo \n 2- Autor \n 3- Ambos")
-        while int(opc) >= 1 and int(opc)<= 0:
-            if opc == "1":
-                titulo = input("Ingrese el título del libro: ")
-                for libro in self.libros:
-                    if libro.titulo == titulo:
-                        print(f"Titulo: {libro.titulo}, Autor: {libro.autor}, Estado: {libro.estado}")
-                break
-            
-            elif opc == "2":
-                autor = input("Ingrese el autor del libro: ")
-                for libro in self.libros:
-                    if libro.autor == autor:
-                        print(f"Titulo: {libro.titulo}, Autor: {libro.autor}, Estado: {libro.estado}")
-                break
-            
-            elif opc == "3":
-                titulo = input("Ingrese el título del libro: ")
-                autor = input("Ingrese el autor del libro: ")
-                for libro in self.libros:
-                    if libro.titulo == titulo and libro.autor == autor:
-                        print(f"Titulo: {libro.titulo}, Autor: {libro.autor}, Estado: {libro.estado}")
-                break
-            else: 
-                print("Opción no válida")
+        if opc == "1":
+            titulo = input("Ingrese el título del libro: ")
+            for libro in self.libros:
+                if libro.titulo == titulo:
+                    print(f"Titulo: {libro.titulo}, Autor: {libro.autor}, Estado: {libro.estado}")
+                    
+        elif opc == "2":
+            autor = input("Ingrese el autor del libro: ")
+            for libro in self.libros:
+                if libro.autor == autor:
+                    print(f"Titulo: {libro.titulo}, Autor: {libro.autor}, Estado: {libro.estado}")
+
+        elif opc == "3":
+            titulo = input("Ingrese el título del libro: ")
+            autor = input("Ingrese el autor del libro: ")
+            for libro in self.libros:
+                if libro.titulo == titulo and libro.autor == autor:
+                    print(f"Titulo: {libro.titulo}, Autor: {libro.autor}, Estado: {libro.estado}")
+
+        else: 
+            print("Opción no válida")
         

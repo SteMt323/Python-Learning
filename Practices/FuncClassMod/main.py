@@ -1,5 +1,9 @@
 from menu import inicializar_biblio, menu
 
+"""
+Practica de funciones, clases y modulos
+"""
+
 def main():
     biblioteca = inicializar_biblio()
     menu(biblioteca)

@@ -12,16 +12,19 @@ class Libro():
             return "El libro está prestado"
         
 class Biblioteca():
-    def __init__(self, libros = list()):
+    def __init__(self, libros = None):
+        if libros == None:
+            libros = list()
         self.libros = libros
         
     def agregar_libro(self):
         titulo = input("Ingrese el título del libro: ")
         autor = input("Ingrese el autor del libro: ")
         est = input("¿El libro está disponible? (S/N): ")
-        estado = lambda est: True if est == "S" else False
+        estado = est.upper()
+        estado = lambda estado: True if estado == "S" else False
         
-        self.libros = Libro(titulo, autor, estado(est))
+        self.libros.append(Libro(titulo, autor, estado(est)))
         print("El libro se ha agregado con exito!")
         
     def ver_todos_libros(self):
@@ -30,12 +33,12 @@ class Biblioteca():
             
     def ver_libros_dispo(self):
         for libro in self.libros:
-            if libro.estado == True:
+            if libro.estado:
                 print(f"Titulo: {libro.titulo}, Autor: {libro.autor}")
             
     def ver_libros_prestados(self):
         for libro in self.libros:
-            if libro.estado == False:
+            if not libro.estado:
                 print(f"Titulo: {libro.titulo}, Autor: {libro.autor}")
                 
     def prestar_libro(self):
@@ -50,7 +53,7 @@ class Biblioteca():
         for libro in self.libros:
             if libro.titulo == titulo:
                 libro.estado = True
-                print(f"El libro {libro.titulo} de {libro.autor} ha sido prestado")
+                print(f"El libro {libro.titulo} de {libro.autor} ha sido devuelto")
                 
     def buscar_libro_titulo_autor(self):
         opc = input("Desea buscar el libro por: \n 1- Titulo \n 2- Autor \n 3- Ambos")

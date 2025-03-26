@@ -1,0 +1,47 @@
+1️⃣ Pilas (Stacks)
+
+    - Concepto y uso
+    
+    - Implementación con listas y con deque
+    
+    - Operaciones básicas: push, pop, peek
+    
+    - Aplicaciones prácticas (ejemplo: verificación de paréntesis balanceados)
+
+2️⃣ Colas (Queues)
+
+    - Diferencias con las pilas
+
+    - Implementación con listas y deque
+
+    - Queue de queue module
+
+    - Aplicaciones prácticas (ejemplo: simulación de un sistema de turnos)
+
+3️⃣ Colas de prioridad y Heap
+
+    - heapq en Python
+
+    - Concepto de min-heap y max-heap
+
+    - Aplicaciones
+
+4️⃣ Listas enlazadas (Linked Lists)
+
+    - Implementación desde cero
+
+    - Operaciones básicas: inserción, eliminación, búsqueda
+
+    - Tipos: simple, doble y circular
+
+5️⃣ Árboles y Grafos
+
+    - Árboles binarios y BST (árbol binario de búsqueda)
+
+    - Grafos y algoritmos de búsqueda (BFS, DFS)
+
+6️⃣ Algoritmos de Ordenamiento y Búsqueda
+
+    - Búsqueda lineal y binaria
+
+    - Ordenamiento: burbuja, selección, inserción, merge sort, quick sort

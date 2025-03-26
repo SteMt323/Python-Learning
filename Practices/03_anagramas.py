@@ -14,7 +14,7 @@ def anagrama(word1, word2):
     if word1 == word2:
         return False
     elif (sorted(word1) == sorted(word2)):
-        return True
+        return True 
     else:
         return False
         

@@ -1,0 +1,49 @@
+Una lista enlazada es una estructura de datos en la que los 
+elementos están almacenados en nodos. Cada uno contiene:
+
+1. Un valor (los datos que queremos almacenar)
+2. Una referencia (puntero) al siguiente nodo de la lista.
+
+
+Operaciones básicas de las listas enlazadas: 
+- Agregar el nodo inicial
+- Agregar el nodo final
+- Buscar un nodo
+- Eliminar un nodo
+- Imprimir la lista
+
+Como podemos visualizar en "01_intro.py" es un ejercicio básico de listas 
+con las operaciones comunes.
+Primero se crea la "clase" de los nodos 
+el cual va a contener dos elementos importantes:
+    1. data (Es la información que contendra el nodo, es el elemento)
+    2. next (Es el puntero hacia el siguiente nodo)
+
+Teniendo esas 2 características, ya es suficiente para poder realizar nuestra LinkedList.
+Se crea la "clase" LinkedList la cual básicamente contendra las 
+operaciones básicas de las listas enlazadas
+    - Agregar el nodo inicial
+        La función prepend() es la encargada de agregar el nodo inicial
+
+    - Agregar el nodo final
+        La función append() se encarga de agregar el nodo final
+        recorre todos los nodos y enlaza el nodo temporal al nuevo nodo al final
+
+    - Buscar un nodo
+        La función search() se encarga de buscar un nodo con un valor en especifico
+        se le pasa un argumento key el cual si coincide con alguna de los data, retornara True.
+        Si después de recorrer todos los nodos y no encontrar una coincidencia, retorna False.
+
+    - Eliminar un nodo
+        La función delete() es la encargada de esta operación.
+        Primero evaluamos si la cabeza de nuestra LinkedList y el contenido de esta coincide con la llave pasada por argumento,
+        se elimina dicho nodo, básicamente nuestro nodo temporal pasa a tener el contenido de nuestro siguiente nodo (self.head = self.next)
+        y el nodo inical se elimina (temp = None).
+
+        Luego viene algo más complejo, básicamente primero declareamos una variable que contendra el nodo previo,
+        luego buscamos el nodo a eliminar:
+        - Recorre la lista hasta encontraar el nodo con el contenido de key
+        - prev guarda el nodo anterior al que queremos eliminar
+        - Si se llega al final "temp == None", significa que key no se encuentra en la lista
+                            
+    - Imprimir la lista 

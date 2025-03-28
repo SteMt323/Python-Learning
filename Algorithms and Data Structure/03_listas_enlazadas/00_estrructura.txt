@@ -1,0 +1,24 @@
+Vale, como sabemos hay 2 elemntos principales en las LinkedList:
+    - valor
+    - puntero
+
+Veamos el siguiente ejemplo
+
+   head                    tail
+    |                        |
+    |                        |
+    1 -> 2 -> 3 -> 4 -> 5 -> 6 -> None
+    |    |    |    |    |    |
+    v    v    v    v    v    v
+    Cada uno de los números vistos son nodos
+    nodos que contienen elementos.
+
+
+
+    |V|   |V|   |V|   |V|
+    |N| ->|N| ->|N| ->|N| -> None
+    |P|   |P|   |P|   |P|
+
+    V = valor
+    N = nodo
+    P = puntero (dirección del nodo)

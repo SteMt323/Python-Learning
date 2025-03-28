@@ -1,4 +1,7 @@
-![Python image](https://www.fullstackpython.com/img/logos/py.png)
+
+<div align="center">
+  <img src="https://www.fullstackpython.com/img/logos/py.png" height="400" alt="stats graph"  />
+</div>
 
 # Learning Python
 

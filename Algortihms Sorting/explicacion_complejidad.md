@@ -14,6 +14,18 @@ La **complejidad algorítmica** describe el tiempo de ejecución o uso de memori
 | **O(2^n)** | Exponencial  | Crece extremadamente rápido, usado en problemas de backtracking. |
 | **O(n!)** | Factorial    | La peor complejidad, usada en permutaciones y problemas de fuerza bruta. |
 
+## Comparación de Algoritmos de Ordenamiento
+
+| Algoritmo       | Complejidad Promedio | Complejidad Peor Caso | Espacio Adicional | Estable |
+|-----------------|---------------------|----------------------|------------------|---------|
+| Bubble Sort    | O(n²)                | O(n²)                | O(1)             | Sí      |
+| Insertion Sort | O(n²)                | O(n²)                | O(1)             | Sí      |
+| Selection Sort | O(n²)                | O(n²)                | O(1)             | No      |
+| Merge Sort     | O(n log n)           | O(n log n)           | O(n)             | Sí      |
+| Quick Sort     | O(n log n)           | O(n²)                | O(log n)         | No      |
+| Heap Sort      | O(n log n)           | O(n log n)           | O(1)             | No      |
+| Counting Sort  | O(n + k)             | O(n + k)             | O(k)             | Sí      |
+
 ---
 
 ## Ejemplos en Python
@@ -72,5 +84,3 @@ def fibonacci(n):
 
 ## 🚀 Conclusión
 Elegir el algoritmo correcto es clave para mejorar el rendimiento. Si tienes una lista grande, evita O(n²) y busca soluciones O(n log n) o mejores.
-
-

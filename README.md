@@ -35,7 +35,20 @@ actualizando constantemente hasta temas más avanzados.
 - Clases
 - Modulos
 
-### 2. Practicas
+### 2. Algoritmos de Ordenamiento
+- Complejidad Algorítmica y Notación Big-O
+- Bubble Sort
+- Selection Sort
+- Insertion Sort
+- Merge Sort
+
+### 3. Data Estructures
+- Listas Enlazadas
+- Grafos
+- Arboles 
+- Hash Tables
+
+### 4. Practicas
 - Ejercicios de practica
 
 ## ModuloBackend

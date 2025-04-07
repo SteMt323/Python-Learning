@@ -59,7 +59,8 @@ actualizando constantemente hasta temas más avanzados.
 ### 5. Practicas
 - Ejercicios de practica
 
-## ModuloBackend
+## Modulos
+- [ModuloPOO](https://github.com/SteMt323/Python-Modulo-POO.git)
 - [ModuloBackend](https://github.com/SteMt323/Python_Modulo_Backend.git)
 
 ## Autores

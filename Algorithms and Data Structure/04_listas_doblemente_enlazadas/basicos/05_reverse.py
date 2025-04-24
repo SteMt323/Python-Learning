@@ -34,4 +34,34 @@ class DoubleLinkedList:
             
     def reverse_list(self):
         # no se usa recursion, el head aqui tiene que ser el tail, y el tail el head
-        return
+        if not self.head:
+            print("Lista vacía...")
+            return
+        
+        current = self.head
+        previous_node = None
+        next_node = None
+        while current:
+            next_node = current.next
+            current.next = previous_node
+            previous_node = current
+            current = next_node
+        self.head = previous_node
+        
+def main():
+    lista: DoubleLinkedList = DoubleLinkedList()
+    lista.append(1)
+    lista.append(2)
+    lista.append(3)
+    lista.append(4)
+    lista.append(5)
+    print("Lista normal: ")
+    lista.print_forward()
+    print("\nLista inversa: ")
+    lista.reverse_list()
+    lista.print_forward()
+    
+if __name__ == "__main__":
+    main()
+    
+            

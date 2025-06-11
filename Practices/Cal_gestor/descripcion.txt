@@ -1,0 +1,55 @@
+Ejercicio: Gestor de calificaciones de estudiantes
+
+1. Descripción
+    Crea un programa en Python que permita gestionar las calificaciones de 
+    un grupo de estudiantes mediante un menú interactivo. El programa 
+    deberá guardar en memoria (usando sólo listas y tuplas, sin librerías 
+    externas ni diccionarios) la información de cada alumno:
+
+    - Nombre (cadena)
+
+    - Lista de calificaciones (una lista de números enteros o flotantes)
+
+2. Funciones requeridas (Es opcional hacerlo especificamente como se describe)
+
+    - Agregar alumno
+
+        Pedir al usuario el nombre del estudiante.
+
+        Pedir cuántas calificaciones va a ingresar y luego cada calificación.
+
+        Guardar un registro tipo tupla (nombre, [nota1, nota2, …]) dentro de una lista principal.
+
+    - Eliminar alumno
+
+        Pedir el cif del estudiante y, si existe, eliminar su tupla de la lista.
+
+        Informar si no se encontró.
+
+    - Mostrar estadísticas generales
+        Calcular el promedio de cada alumno.
+
+        Calcular y mostrar el promedio general de todos los alumnos.
+
+    - Alumno con mejor promedio
+
+        Identificar al alumno cuya nota media sea la más alta y mostrar 
+        su nombre y promedio.
+
+    - Salir
+
+        Terminar el programa.
+
+
+3. Detalles adicionales
+    El menú debe mostrarse tras cada operación, hasta que el usuario elija salir.
+
+    Valida entradas: asegúrate de que las notas sean números válidos y no 
+    permitir nombres vacíos.
+
+    Usa sólo estructuras básicas de Python (listas, tuplas, bucles for/while, 
+    condicionales).
+
+    Dale un formato limpio a la salida (por ejemplo, usando f-strings para 
+    los resultados).
+

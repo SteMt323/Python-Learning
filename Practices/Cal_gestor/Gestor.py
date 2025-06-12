@@ -30,7 +30,7 @@ class Gestor:
         tam = 0
         print("\nPromedio por estudiante")
         for i in registro:
-            prom = [sum(registro[i].calificaciones.values())]
+            prom = sum(registro[i].calificaciones.values())
             prom = prom / len(registro[i].calificaciones)
             print(f"{i+1}. {registro[i].nombre}: {prom}")
             total += prom 
@@ -39,3 +39,14 @@ class Gestor:
     
     def calcular_promedio_general(self, total, tam) -> str:
         return f"El promedio general es de {total / tam}"
+    
+    def alumno_mejor_promedio(self) -> str:
+        registro = self.datos
+        all_notes = []
+        for i in registro:
+            prom = sum(registro[i].calificiones.values())
+            all_notes.append(prom)
+        
+        best_student = list(filter(lambda x: x == max(all_notes), sum(self.datos.calificaciones.values())))
+        return f"{best_student.nombre}:\t{max(all_notes)}"
+            

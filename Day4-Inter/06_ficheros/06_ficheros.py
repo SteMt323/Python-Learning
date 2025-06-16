@@ -85,7 +85,8 @@ import csv
 csv_file = open("fichero.csv", "w+")  # "r+" - Modo lectura y escritura
 
 csv_writer = csv.writer(csv_file)
-csv_writer.writerow(["Name", "Surname", "Age", "Language"])  # Escribe una fila en el archivo
+row = ["Name", "Surname", "Age", "Language"]
+csv_writer.writerow(row.split(";"))  # Escribe una fila en el archivo
 csv_writer.writerow(["Juan", "Perez", 30, "Python"])  # Escribe una fila en el archivo
 
 csv_file.seek(0)  # Mueve el puntero al inicio del archivo

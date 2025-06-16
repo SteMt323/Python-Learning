@@ -18,10 +18,10 @@ La **complejidad algorítmica** describe el tiempo de ejecución o uso de memori
 
 | Algoritmo       | Complejidad Promedio | Complejidad Peor Caso | Espacio Adicional | Estable |
 |-----------------|---------------------|----------------------|------------------|---------|
+| Merge Sort     | O(n log n)           | O(n log n)           | O(n)             | Sí      |
 | Bubble Sort    | O(n²)                | O(n²)                | O(1)             | Sí      |
 | Insertion Sort | O(n²)                | O(n²)                | O(1)             | Sí      |
 | Selection Sort | O(n²)                | O(n²)                | O(1)             | No      |
-| Merge Sort     | O(n log n)           | O(n log n)           | O(n)             | Sí      |
 | Quick Sort     | O(n log n)           | O(n²)                | O(log n)         | No      |
 | Heap Sort      | O(n log n)           | O(n log n)           | O(1)             | No      |
 | Counting Sort  | O(n + k)             | O(n + k)             | O(k)             | Sí      |

@@ -27,12 +27,12 @@ class RandomMachine:
     def elegir_num(self):
         random_num = rm.randint(1, 100)
         intentos = 0
-        num = int(input("Seleccione un numero entre el 1 al 100: "))
         while True:
+            num = int(input("Seleccione un numero entre el 1 al 100: "))
             if num == random_num:
                 print(f"\nHas acertado, el número elegido por la maquina es: {random_num}")
                 print(f"Numeros de Intentos: {intentos}")
-                self.historial.append(Historial(intentos, dt.datetime.now()))
+                self.historial.append(Historial(intentos, dt.date.today()))
                 break
             if num > random_num:
                 print("\nTe has pasado!!!")
@@ -44,19 +44,27 @@ class RandomMachine:
                 os.system("pause")
                 
     def mostrar_historial(self):
-        for i in self.historial:
-            print(f"{i+1}. {self.historial[i].fecha}\n\tIntentos: {self.historial[i].intentos}")
+        for i, historial in enumerate(self.historial):
+            print(f"{i+1}. Intentos: {historial.intentos} - Fecha: {historial.fecha}")
             
     def mostrar_record(self):
-        return min(self.historial.intentos)
+        historial = self.historial
+        record = None
+        for i, intentos in enumerate(historial):
+            if not record: record = intentos.intentos
+            if intentos.intentos < record:
+                record = intentos.intentos
+                
+        return record
     
 def menu():
     adv: RandomMachine = RandomMachine()
     while True:
-        print("==== ADIVINA EL NÚMERO ====")
+        print("\n\n==== ADIVINA EL NÚMERO ====")
         print("1. Elegir Numero")
         print("2. Mostrar Historial de Intentos")
         print("3. Mostrar Recórd")
+        print("4. Salir")
         opc = input("Elija una opción: ")
         match opc:
             case "1":
@@ -64,7 +72,9 @@ def menu():
             case "2":
                 adv.mostrar_historial()
             case "3":
-                adv.mostrar_record()
+                print(adv.mostrar_record())
+            case "4":
+                break
             case _:
                 print("Opcion invalida...")
                 

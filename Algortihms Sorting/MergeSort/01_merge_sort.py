@@ -15,8 +15,8 @@ Visite la siguiente página para visualizar de manera gráfica
 estos algortimos:
     https://visualgo.net/en/sorting
 """
-
-lista = [5, 3, 8, 6, 2]
+import tracemalloc 
+import time as tm
 
 def merge_sort(arr):
     if len(arr) > 1:
@@ -51,4 +51,16 @@ def merge_sort(arr):
                 
     return arr
 
-print(merge_sort(lista))
+
+lista = list(x for x in reversed(range(0, 100000)))
+
+tracemalloc.start()
+start = tm.time()
+merge_sort(lista)
+end = tm.time()
+current, peak = tracemalloc.get_traced_memory()
+tracemalloc.stop()
+
+print(f"TIEMPO: {end - start} segundos")
+print(f"Memoria actual usada: {current / 10**6:.2f} MB")
+print(f"Pico de memoria usado: {peak / 10**6:.2f} MB")
